@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "cypress open --e2e -b chrome",
+    "test": "cypress run",
+    "open": "cypress open --e2e -b chrome",
     "prebuild": "npx eslint src/**",
     "build": "tsc -d",
     "lint": "npx eslint src/** --fix"
