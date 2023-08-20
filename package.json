@@ -1,0 +1,14 @@
+{
+  "name": "cypress-json-functions",
+  "version": "1.0.0",
+  "description": "Example functions in json files",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --e2e -browser chrome"
+  },
+  "author": "Jovan Ilić",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.13.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data {{randomNumber}} for responses to routes",
+  "random1": "{{randomNumber}}",
+  "random2": "{{randomNumber}}",
+  "random3": "{{randomString}}"
+}
