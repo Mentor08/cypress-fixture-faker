@@ -16,6 +16,8 @@ describe('JSON parser', () => {
       cy.log(parsedFile.between);
       cy.log(parsedFile.amount);
       cy.log(parsedFile.arrayElement);
+
+      expect(parsedFile.email).to.not.contain('${faker');
     });
   });
 });
