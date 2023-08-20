@@ -1,13 +1,12 @@
 describe('JSON parser', () => {
   it('Parses json file properly', () => {
-    cy.visit('https://example.cypress.io');
 
     cy.fixture('example.json').then(parsedFile => {
       cy.log(parsedFile.name);
       cy.log(parsedFile.email);
       cy.log(parsedFile.body);
       cy.log(parsedFile.int);
-      cy.log(parsedFile.intParam);
+      cy.log(parsedFile.intWithParam);
       cy.log(parsedFile.intObjectParam);
       cy.log(parsedFile.string);
       cy.log(parsedFile.airline);

@@ -1,14 +1,32 @@
 {
-  "name": "cypress-json-functions",
+  "name": "cypress-fixture-faker",
   "version": "1.0.0",
-  "description": "Example functions in json files",
-  "main": "index.js",
+  "description": "Cypress plugin that enables faker functions in json fixture files",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "cypress open --e2e -b chrome"
+    "test": "cypress open --e2e -b chrome",
+    "prebuild": "npx eslint src/**",
+    "build": "tsc -d",
+    "lint": "npx eslint src/** --fix"
   },
-  "author": "Jovan Ilić",
-  "license": "ISC",
+  "keywords": [
+    "cypress",
+    "plugin",
+    "fixture",
+    "faker"
+  ],
+  "author": "Jovan Ilić <ilicjovan89@gmail.com> (https://jovanilic.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/Zaista/cypress-fixture-faker",
+  "bugs": "https://github.com/Zaista/cypress-fixture-faker/issues",
   "dependencies": {
     "cypress": "^12.13.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0"
   }
 }

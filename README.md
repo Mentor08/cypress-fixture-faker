@@ -1,10 +1,36 @@
-A SecretSanta app for my friends.
+# Introduction
 
-Checkout the live thing here: https://secretsanta.jovanilic.com
+Cypress plugin that that enables faker functions in json fixture files.
 
-# local dev
+# Installation
+
+run `npm install cypress-fixture-faker`<br>
+configure (see below)<br>
+profit
+
+# Configuration
+
+add the following line in your `support/e2e.js` file:
+```JavaScript
+import 'cypress-fixture-faker';
 ```
-$ npm run start
-```
 
-See the LICENSE.md for license information.
+# Usage
+```JSON
+{
+    "name": "Using fixtures to represent data ${faker.string.uuid()}",
+    "email": "${faker.internet.email()}",
+    "body": "Fixtures are a great way to mock data ${faker.string.uuid()} for responses to routes",
+    "int": "${faker.number.int()}",
+    "intParam": "${faker.number.int(100)}",
+    "intObjectParam": "${faker.number.int({ min: 10, max: 15 })}",
+    "string": "${faker.string.numeric()}",
+    "airline": "${faker.airline.flightNumber({ addLeadingZeros: true })}",
+    "airline2": "${faker.airline.flightNumber({ length: { min: 2, max: 3 } })}",
+    "color": "${faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' })}",
+    "boolean": "${faker.datatype.boolean(0.9)}",
+    "between": "${faker.date.between({ from: '2029-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' })}",
+    "amount": "${faker.finance.amount(5, 10, 2, '$')}",
+    "arrayElement": "${faker.helpers.arrayElement(['cat', 'dog', 'mouse'])}"
+}
+```

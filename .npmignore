@@ -3,8 +3,6 @@
 cypress/
 node_modules/
 src/
-private/
-.prettierrc.json
+.eslintrc
 cypress.config.ts
-docker-compose.yaml
 tsconfig.json
