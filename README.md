@@ -1,21 +1,17 @@
 # Introduction
 
-Cypress plugin that that enables faker functions in json fixture files.
+Cypress plugin that enables faker functions in json fixture files.
 
 # Installation
 
-run `npm install cypress-fixture-faker`<br>
-configure (see below)<br>
-profit
-
-# Configuration
-
+run `npm install cypress-fixture-faker`
 add the following line in your `support/e2e.js` file:
 ```JavaScript
 import 'cypress-fixture-faker';
 ```
+profit
 
-# Usage
+# Examples
 ```JSON
 {
     "name": "Using fixtures to represent data ${faker.string.uuid()}",
@@ -30,7 +26,7 @@ import 'cypress-fixture-faker';
     "color": "${faker.color.colorByCSSColorSpace({ format: 'css', space: 'display-p3' })}",
     "boolean": "${faker.datatype.boolean(0.9)}",
     "between": "${faker.date.between({ from: '2029-01-01T00:00:00.000Z', to: '2030-01-01T00:00:00.000Z' })}",
-    "amount": "${faker.finance.amount(5, 10, 2, '$')}",
+    "amount": "${faker.finance.amount({ min: 5, max: 10, dec: 5, symbol: '', autoFormat: true })}",
     "arrayElement": "${faker.helpers.arrayElement(['cat', 'dog', 'mouse'])}"
 }
 ```

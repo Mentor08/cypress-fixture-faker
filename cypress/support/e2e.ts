@@ -1,2 +1,2 @@
 import './commands';
-import '../../dist'
+import '../../dist';

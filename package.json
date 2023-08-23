@@ -1,15 +1,15 @@
 {
   "name": "cypress-fixture-faker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cypress plugin that enables faker functions in json fixture files",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "cypress run",
     "open": "cypress open --e2e -b chrome",
-    "prebuild": "npx eslint src/**",
+    "prebuild": "npx eslint src/** cypress/**",
     "build": "tsc -d",
-    "lint": "npx eslint src/** --fix"
+    "lint": "npx eslint src/** cypress/** --fix"
   },
   "keywords": [
     "cypress",
