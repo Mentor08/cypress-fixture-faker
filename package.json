@@ -1,6 +1,6 @@
 {
   "name": "cypress-fixture-faker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cypress plugin that enables faker functions in json fixture files",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -22,12 +22,13 @@
   "homepage": "https://github.com/Zaista/cypress-fixture-faker",
   "bugs": "https://github.com/Zaista/cypress-fixture-faker/issues",
   "dependencies": {
-    "cypress": "^12.13.0"
+    "cypress": "^13.13.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0"
+    "@faker-js/faker": "^8.4.1",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.56.0"
   }
 }

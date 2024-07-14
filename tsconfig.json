@@ -3,6 +3,7 @@
     "target": "es5",
     "lib": ["es5", "dom"],
     "outDir": "./dist",
+    "rootDir": "./src",
     "removeComments": true,
     "strict": true,
     "noImplicitAny": true,
