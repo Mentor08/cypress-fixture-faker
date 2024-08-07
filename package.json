@@ -1,15 +1,15 @@
 {
   "name": "cypress-fixture-faker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cypress plugin that enables faker functions in json fixture files",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "cypress run",
     "open": "cypress open --e2e -b chrome",
-    "prebuild": "npx eslint src/**",
+    "prebuild": "npx eslint .",
     "build": "tsc -d",
-    "lint": "npx eslint src/** cypress/** --fix"
+    "lint": "npx eslint ."
   },
   "keywords": [
     "cypress",
@@ -22,13 +22,17 @@
   "homepage": "https://github.com/Zaista/cypress-fixture-faker",
   "bugs": "https://github.com/Zaista/cypress-fixture-faker/issues",
   "dependencies": {
-    "cypress": "^13.13.0"
+    "cypress": "^13.13.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "@faker-js/faker": "^8.4.1",
-    "@types/node": "^20.14.10",
-    "@typescript-eslint/eslint-plugin": "^7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "eslint": "^8.56.0"
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1"
   }
 }

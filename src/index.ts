@@ -5,7 +5,6 @@ import {faker} from '@faker-js/faker';
 Cypress.Commands.overwrite('fixture', (originalFn, filePath, encoding, options) => {
     return originalFn(filePath, encoding, options).then((fileContent) => {
         const fileContentString = JSON.stringify(fileContent);
-
         const regex = /\${faker\.(.*?)\((.*?)\)}/g;
         const parsedFileContent = fileContentString.replace(regex, parseFaker);
 
